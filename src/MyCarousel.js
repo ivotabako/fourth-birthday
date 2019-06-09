@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel, { Modal, ModalGateway } from 'react-images';
 
-const images = [{ src: '/images/background-left.jpg' }];
+const images = [{ src: '/res/1.jpg' }, { src: '/res/2.jpg' }];
 
 class MyCarousel extends React.Component {
     state = { modalIsOpen: false };
