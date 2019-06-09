@@ -5,10 +5,15 @@ body {
   
 }
 #container {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    background-image: url('/images/background.jpg');
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: inline-block;
+ 
+  width: 100%;
+  background-image: url('/images/background.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
@@ -25,13 +30,87 @@ body {
     padding-top: 55%; /* 4:3 aspect ratio */
  
 }
-#element {
-    position: absolute;
-    /* top: 0; */
-    bottom: 0;
-    left: 0;
-    /* right: 0; */
-    background-color: #852729;
-    padding: .5em 1.5em;
-    color: #fff;
+
+.wrapper {
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  width: 150px;
+  height: 150px;
+  
+}
+.wrapper .circle {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-color: #33cc33;
+  margin: auto;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+.wrapper .circle.pulse {
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+  background-color: #99e699;
+}
+.wrapper svg {
+  fill: #279b27;
+  stroke: #279b27;
+  stroke-linejoin: round;
+  stroke-width: 5;
+  transition: all 0.3s;
+}
+.wrapper svg:hover {
+  cursor: pointer;
+  fill: #228722;
+  stroke: #228722;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
 }

@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
+import MyCarousel from './MyCarousel';
 
 function App() {
   return (
-    <div id="container">
-      <div id="dummy"></div>
-    </div>
+    <MyCarousel />
   );
 }
 
