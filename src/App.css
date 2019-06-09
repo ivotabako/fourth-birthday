@@ -1,0 +1,37 @@
+body {
+  background: black;
+  width: 90%;
+  margin: 0 auto;
+  
+}
+#container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    background-image: url('/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  
+  transition: all .5s ease;
+
+}
+#container:hover {
+  background-size: 120%;
+  /* background-position: bottom right; */
+  
+}
+#dummy {
+    padding-top: 55%; /* 4:3 aspect ratio */
+ 
+}
+#element {
+    position: absolute;
+    /* top: 0; */
+    bottom: 0;
+    left: 0;
+    /* right: 0; */
+    background-color: #852729;
+    padding: .5em 1.5em;
+    color: #fff;
+}
